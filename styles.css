@@ -1,0 +1,80 @@
+/* General body styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Styles for the main heading */
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Styles for the input container to align input and button */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for the input label */
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+/* Styles for the input field */
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    width: 150px;
+}
+
+/* Styles for the button */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 42px; /* Adjust this to match the input field's height */
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Styles for the result text */
+p#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #555;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Additional styling for any paragraphs */
+p {
+    font-size: 1.1em;
+    color: #666;
+}

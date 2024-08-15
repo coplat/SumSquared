@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool!</title>
+</head>
+<body>
+    <h2>Cool, you can now calculate the sum of squares here.</h2>
+    <p> Just type in a number below and we'll calculate the sum of squares from 1 to <i>your number</i>.</p>
+    
+    <div class="input-container">
+        <label for="numberInput"></label>
+        <input type="text" id="numberInput" placeholder="Enter a number"> 
+        <button id="calculateButton">Calculate</button>
+    </div>
+    
+    <p id="result">Result</p>
+    
+    <script type="module">
+        import init, { summing_up_squares } from "./pkg/hello_wasm.js";
+
+        
+        init().then(() => {
+            const input = document.getElementById('numberInput');
+            const button = document.getElementById('calculateButton');
+            const result = document.getElementById('result');
+
+            button.addEventListener('click', () => {
+                const n = parseInt(input.value, 10);
+
+                if (isNaN(n)) {
+                    result.textContent = 'Please enter a valid number.';
+                } else {
+                    const sum = summing_up_squares(n);
+                    result.textContent = `The sum of squares from 1 to ${n} is: ${sum}`;
+                }
+            });
+        });
+    </script>  
+</body>
+</html>
