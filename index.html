@@ -19,6 +19,9 @@
     <p id="result">Result</p>
     
     <script type="module">
+        function summingUpSquares(n) {
+    return Array.from({ length: n }, (_, i) => (i + 1) * (i + 1)).reduce((acc, val) => acc + val, 0);
+}
         import init, { summing_up_squares } from "./pkg/hello_wasm.js";
 
         
@@ -33,8 +36,20 @@
                 if (isNaN(n)) {
                     result.textContent = 'Please enter a valid number.';
                 } else {
-                    const sum = summing_up_squares(n);
-                    result.textContent = `The sum of squares from 1 to ${n} is: ${sum}`;
+                    let time1 = Date.now()
+                    const sum = summing_up_squares(BigInt(n));
+                    let time2 = Date.now()
+                    let final = time2-time1;
+
+                    let time3 = Date.now()
+                    const sum2 = summingUpSquares(n)
+                    let time4 = Date.now()
+                    let final2 = time4-time3;
+
+                    
+
+                    result.innerHTML = `The RUSTY sum of squares from 1 to ${n} is: ${sum} and it took ${final} seconds <br/>
+                    The SCRIPTY sum of squares from 1 to ${n} is: ${sum2} and it took ${final2} seconds <br/>`;
                 }
             });
         });

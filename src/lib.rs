@@ -2,7 +2,7 @@ use wasm_bindgen::prelude::*;
 
 // exposing `summing_up_squares` function to JavaScript
 #[wasm_bindgen]
-pub fn summing_up_squares(n: u32) -> u32 {
+pub fn summing_up_squares(n: u64) -> u64 {
     (1..=n).map(|x| x * x).sum()
 }
 

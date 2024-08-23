@@ -1,12 +1,12 @@
 let wasm;
 
 /**
-* @param {number} n
-* @returns {number}
+* @param {bigint} n
+* @returns {bigint}
 */
 export function summing_up_squares(n) {
     const ret = wasm.summing_up_squares(n);
-    return ret >>> 0;
+    return BigInt.asUintN(64, ret);
 }
 
 /**

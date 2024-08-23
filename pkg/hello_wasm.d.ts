@@ -1,10 +1,10 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
-* @param {number} n
-* @returns {number}
+* @param {bigint} n
+* @returns {bigint}
 */
-export function summing_up_squares(n: number): number;
+export function summing_up_squares(n: bigint): bigint;
 /**
 * @returns {boolean}
 */
