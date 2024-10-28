@@ -1,6 +1,6 @@
 # Summing Up Squares!
 
-This Rust project exposes a function, `summing_up_squares`, that calculates the sum of squares from 1 to a given number `n` to JavaScript via WebAssembly (WASM).
+`summing_up_squares` is a Rust program which calculates the sum of squares from 1 to a given number `n` to JavaScript via WebAssembly (WASM).
 
 ## Features
 
